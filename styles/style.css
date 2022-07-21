@@ -1,5 +1,6 @@
 
 body{
+    
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
@@ -9,6 +10,10 @@ body{
 }
 .p{
     margin-top: -10%;
+}
+.upcoming-match{
+    text-decoration: none;
+    color: black;
 }
 .header{
     display: flex;
@@ -34,7 +39,10 @@ body{
     padding: 10px 10px;
     background-color: red;
 }
-
+.button:hover{
+    background-color: green;
+    cursor: pointer;
+}
 .top{
     width: 80%;
     /* margin-left: 100px; */
@@ -43,36 +51,53 @@ body{
     width: 90%;
     margin-top: 60px;
 }
-.form{
-    width: 80px;
-    height: 20px;
-    margin-top: 5%;
-    padding: 5%;
-}
-.form button{
-    width: 25%;
-    margin-top: 7px;
-   background-color: white;
+.button-group button{
+    background-color: white;
+    border: 2px solid black;
+    display: grid;
+   
     color: black;
-    display: block;
-    
+    padding: 12px;
+    cursor: pointer;
+    width: 20%;
+    margin-bottom: 1%;
+    margin-left: 5%;
 }
-.form button .blog{
-    background-color: red;
-    color: white;
-}
-.transfer{
-    width: 75%;
-    justify-content: center;
+.button-group{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0%;
-    margin: 0%;
+}
+
+
+.transfer, .matches{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-column-gap: 0;
+    
+    align-items: center;
+}
+
+.two-sides{
+    display: flex;
+   
+}
+.match-update{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width:fit-content;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 .double-div{
     margin-top: 5%;
-    display: flex;
+    
 }
 hr{
     width: 75%;
@@ -94,4 +119,78 @@ footer .footer-para {
     padding-left: 10%;
     padding-bottom: 5%;
     padding-top: 5%;
+}
+
+@media screen and (max-width: 375px) {
+    .banner-img{
+        width: 334px;
+        position: center;
+        flex-direction: column;
+    
+    }
+    .transfer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .footer-para{
+        display: flex;
+        flex-direction: column;
+    }
+    .button-group button{
+        background-color: white;
+        border: 2px solid black;
+        display: grid;
+       
+        color: black;
+        padding: 12px;
+        cursor: pointer;
+        width: 30%;
+        margin-bottom: 1%;
+        margin-left: 5%;
+    }
+    .button-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h1{
+        font-size: 10px;
+    }
+    .p{
+        white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    }
+    .top .banner-img{
+        width: 334px;
+        height: 472px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .button-group{
+        display: flex;
+        flex-direction: row;
+        margin-left: 20%;
+        align-items: center;
+    }
+    .transfer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .footer-para{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-right: 5%;
+        margin-left: -4%;
+        justify-items: center;
+        justify-content: center;
+
+    }
+    .header{
+        padding-bottom: 5%;
+    }
+    
 }
